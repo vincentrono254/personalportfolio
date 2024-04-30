@@ -14,10 +14,10 @@ document.querySelectorAll(".nav-link").forEach((n) =>
 );
 
 //
-var tablinks = Array.from(document.getElementsByClassName("tab-links"));
-var tabcontents = Array.from(document.getElementsByClassName("tab-contents"));
+var tablinks = document.getElementsByClassName(".tab-links p");
+var tabcontents = document.getElementsByClassName(".tab-contents");
 
-function opentab(tabname) {
+function opentab(tabName) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
   }
@@ -25,4 +25,6 @@ function opentab(tabname) {
   for (tabcontent of tabcontents) {
     tabcontent.classList.remove("active-tab");
   }
+  event.currentTarget.classList.add("active-link");
+  document.getElementById(tabName).classList.add("active-tab");
 }
