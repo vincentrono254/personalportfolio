@@ -13,19 +13,22 @@
         <nav>
           <h1 class="logo">KeyBoardSolutions</h1>
       
-          <ul>
-            <li><a href="#"><i class="fa-solid fa-house"></i>Home</li>
-            <li><a href="#"><i class="fa-solid fa-user"></i>About</a></li>
-            <li><a href="#"><i class="fa-solid fa-sliders"></i>Services</a></li>
-            <li><a href="#"><i class="fa-solid fa-file"></i>Portfolio</a></li>
-            <li><a href="#"><i class="fa-solid fa-phone-volume"></i>Contact</a></li>
+          <ul id="sidemenu">
+            <li><a href="#"></i>Home</li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Portfolio</a></li>
+            <li><a href="#">Contact</a></li>
+            <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
           </ul>
+          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
         </nav>
+        
         
         <div class="content-container">
     <div id="hearder-text">
-          <p>Project Manager/Software Developer</p>
-          <h1>Hi, I'm <span>Vincent</span><br> Rono from Nairobi Kenya</h1>
+          <p>Project Manager/Software Developer</p><br><br>
+          <h1>Hello, I'm <span>Vincent</span><br> Rono from Nairobi Kenya</h1>
         </div>
         <div id="header-pic">
           <img src="images/vin.jpg">
@@ -54,16 +57,16 @@ interpersonal skills and reliable nature make me an asset to many teams.
 </div>
 <div class="tab-contents active-tab" id="skills">
   <ul>
-    <li><span>UI UX</span><br>Designing web /app interfaces</li>
-    <li><span>UI UX</span><br>Web development /app interfaces</li>
-    <li><span>UI UX</span><br>Designing web /app interfaces</li>
+    <li><span>Programming languages</span><br>I am proficient in HTML, CSS, Javascript</li>
+    <li><span>Problem-Solving</span><br> I am able to analyse complex issues, and propose effective solutions.</li>
+    <li><span>Communication</span><br>Dessiminating correct information to  all team members is important for success.</li>
+    <li><span>Leadership</span><br>providing guidance  for team members on projects.</li>
   </ul>
 </div>
 <div class="tab-contents" id="experience">
   <ul>
-    <li><span>2021 - Current</span><br>Designing web /app interfaces</li>
-    <li><span>2019 - 2021</span><br>Team lead at StarApp LLc</li>
-    <li><span>2017 - 2019</span><br>UI/Ux design Executive at Coin Digital Ltd.</li>
+    <li><span>2022 - 2023</span><br>Customer Experinced Executive At Safaricom Caredesk</li>
+    <li><span>2021 - 2022</span><br>Team lead Anzal communication</li>
     <li><span>2018 - 2019</span><br>Internship At Ampath</li>
   </ul>
 </div>
@@ -86,21 +89,61 @@ interpersonal skills and reliable nature make me an asset to many teams.
           <div>
             <i class="fa-brands fa-square-web-awesome"></i>
             <h1>Web Development</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, aliquam</p>
+            <p>Crafting digital experiences with code, turning visions into interactive websites. Elevating brands with seamless user interfaces and responsive design.</p>
           </div>
           <div>
             <i class="fa-solid fa-computer"></i>
             <h1>IT consultant</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, aliquam</p>
+            <p>
+Guiding businesses through the maze of technology, providing tailored solutions for efficiency and growth.</p>
           </div>
           <div>
             <i class="fa-brands fa-r-project"></i>
             <h1>Project management</h1>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, aliquam</p>
+            <p>Orchestrating success through meticulous planning, execution, and coordination of projects. Streamlining workflows, mitigating risks, and delivering results on time and within budget.</p>
           </div>
         </div>
       </div>
     </div>
+    <!-- contact part -->
+    <div id="contact">
+      <div class="container">
+        <div class="row">
+          <div class="contact-left">
+            <h1>Contact Me:</h1>
+            <p><i class="fa-solid fa-envelope"></i>Vincentmatson23@gmail.com</p>
+            <p><i class="fa-solid fa-phone"></i>+2547199199198</p>
+            <div class="social-icons">
+              <a href=""><i class="fa-brands fa-facebook"></i></a>
+              <a href=""><i class="fa-brands fa-square-x-twitter"></i></a>
+              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+           <a href="images/vincent cv 2024.pdf" download class="btn btn2">Download Resume</a>
+          </div>
+          <div class="contact-right">
+            <form action="">
+              <input type="text" name=" Name" placeholder="Enter Your Name" required>
+              <input type="email" name="Email" placeholder="Enter Your Email" required>
+              <textarea name="Message" placeholder="Your Message"></textarea>
+              <button type="submit" class="btn3" >Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="copyright">
+      <P> © Vincent Matson <i class="fa-solid fa-lightbulb"></i></P>
+      </div>
+    </div >
     <sript src="main.js"></sript>
+    <script>
+      var sidemenu = document.getElementById("sidemenu")
+
+      function openmenu(){
+        sidemenu.style.right = "0";
+      }
+      function closemenu(){
+        sidemenu.style.right = "-200px";
+      }
+    </script>
   </body>
 </html>
