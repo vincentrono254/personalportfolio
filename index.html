@@ -6,19 +6,20 @@
     <title>Vincent Personal Portfolio</title>
     <link rel="stylesheet" href="main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+    
   </head>
   <body>
     <div id="header">
-      <div class="container">
+      <div class="container1">
         <nav>
           <h1 class="logo">KeyBoardSolutions</h1>
       
           <ul id="sidemenu">
             <li><a href="#"></i>Home</li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Portfolio</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
             <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
           </ul>
           <i class="fa-solid fa-bars" onclick="openmenu()"></i>
@@ -51,7 +52,7 @@ am trained in the planning, initiation, implementation, monitoring, evaluation o
 interpersonal skills and reliable nature make me an asset to many teams.
 </p>
 <div class="tab-titles">
- <p class="tab-links active-link" onclick="opentab('Skills')">Skills</p>
+ <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
  <p class="tab-links" onclick="opentab('experience')">Experience</p>
  <p class="tab-links" onclick="opentab('education')">Education</p>
 </div>
@@ -253,6 +254,21 @@ interpersonal skills and reliable nature make me an asset to many teams.
       function closemenu(){
         sidemenu.style.right = "-200px";
       }
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
+
+function opentab(tabname) {
+  for (tablink of tablinks) {
+    tablink.classList.remove("active-link");
+  }
+  for (tabcontent of tabcontents) {
+    tabcontent.classList.remove("active-tab");
+  }
+  document.getElementById(tabname).classList.add("active-tab");
+  event.currentTarget.classList.add("active-link")
+}
+
+      
     </script>
   </body>
 </html>

@@ -1,30 +1,21 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
+var sidemenu = document.getElementById("sidemenu");
 
-hamburger.addEventListener("click", () => {
-  hamburger.classList.toggle("active");
-  navMenu.classList.toggle("active");
-});
+function openmenu() {
+  sidemenu.style.right = "0";
+}
+function closemenu() {
+  sidemenu.style.right = "-200px";
+}
+var tablinks = document.getElementsByClassName("tab-links");
+var tabcontents = document.getElementsByClassName("tab-contents");
 
-document.querySelectorAll(".nav-link").forEach((n) =>
-  n.addEventListener("click", () => {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-  })
-);
-
-//
-var tablinks = document.getElementsByClassName(".tab-links p");
-var tabcontents = document.getElementsByClassName(".tab-contents");
-
-function opentab(tabName) {
+function opentab(tabname) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
   }
-
   for (tabcontent of tabcontents) {
     tabcontent.classList.remove("active-tab");
   }
+  document.getElementById(tabname).classList.add("active-tab");
   event.currentTarget.classList.add("active-link");
-  document.getElementById(tabName).classList.add("active-tab");
 }
