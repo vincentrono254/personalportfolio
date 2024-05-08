@@ -20,16 +20,17 @@
             <li><a href="#services">Services</a></li>
             <li><a href="#portfolio">Portfolio</a></li>
             <li><a href="#contact">Contact</a></li>
-            <i class="fa-solid fa-rectangle-xmark" onclick="closemenu()"></i>
+            <i class="fa-solid fa-rectangle-xmark" onclick="toggleMenu()"></i>
           </ul>
-          <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          <i class="fa-solid fa-bars" onclick="toggleMenu()"></i>
         </nav>
         
         
         <div class="content-container">
     <div id="hearder-text">
           <p>Project Manager/Software Developer</p><br><br>
-          <h1>Hello, I'm <span>Vincent</span><br> Rono from Nairobi Kenya</h1>
+          <h1>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde libero consequatur mollitia nulla accusantium ab, harum illo iste exercitationem. Est!
+          </h1>
         </div>
         <div id="header-pic">
           <img src="images/vin.jpg">
@@ -85,7 +86,7 @@ interpersonal skills and reliable nature make me an asset to many teams.
     <!-- services -->
     <div id="services">
       <div class="container">
-        <h1 class="sub-title" style="text-align: center; color:red; font-size: larger;" >My Services</h1>
+        <h1 class="sub-title" style="font-size: 50px; font-weight: 600;" >My Services</h1>
         <div class="services-list">
           <div>
             <i class="fa-brands fa-square-web-awesome"></i>
@@ -126,7 +127,7 @@ interpersonal skills and reliable nature make me an asset to many teams.
     <!-- ---portfolio---- -->
 <div id="portfolio">
       <div class="container">
-        <h1 class="sub-title">Portfolio</h1>
+        <h1 class="sub-title" style="font-size: 50px; font-weight: 600;">Portfolio</h1>
         <div class="work-list">
           <div class="work">
             <img src="images/web dev.jpeg" />
@@ -241,22 +242,44 @@ interpersonal skills and reliable nature make me an asset to many teams.
         </div>
       </div>
       <div class="copyright">
-      <P> © Vincent Matson <i class="fa-solid fa-lightbulb"></i></P>
+      <P> © Vincent Matson 2024 <i class="fa-solid fa-lightbulb"></i></P>
       </div>
     </div >
     <sript src="main.js"></sript>
     <script>
-      var sidemenu = document.getElementById("sidemenu")
+      // Get the sidemenu element
+const sidemenu = document.getElementById("sidemenu");
 
-      function openmenu(){
-        sidemenu.style.right = "0";
+// Define a function to toggle the sidemenu
+function toggleMenu() {
+  sidemenu.style.right = sidemenu.style.right === "0px"? "-200px" : "0px";
+}
+// Get the navigation links
+const navLinks = document.querySelectorAll('nav ul li a');
+
+// close tabs when a link is clicked
+navLinks.forEach((link) => {
+  link.addEventListener('click', (e) => {
+    // Get the target element
+    const target = e.target;
+
+    // Check if the link is a navigation link
+    if (target.tagName === 'A') {
+      // Get the toggle menu
+      const toggleMenu = document.getElementById('sidemenu');
+
+      // Close the toggle menu on responsive sizes
+      if (window.innerWidth <= 780) {
+        toggleMenu.style.right = '-200px';
       }
-      function closemenu(){
-        sidemenu.style.right = "-200px";
-      }
+    }
+  });
+});
+
+//Get the tab-links and tab-contents and tab-contents on html
 var tablinks = document.getElementsByClassName("tab-links");
 var tabcontents = document.getElementsByClassName("tab-contents");
-
+//define the function
 function opentab(tabname) {
   for (tablink of tablinks) {
     tablink.classList.remove("active-link");
