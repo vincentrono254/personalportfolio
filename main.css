@@ -7,13 +7,26 @@ body {
   background: black;
   color: #fff;
   font-family: "poppins", sans-serif;
+  padding-top: 100px;
+}
+html {
+  scroll-behavior: smooth;
 }
 #header {
   width: 100%;
   height: 100vh;
 }
+.navbar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: black;
+}
 .container {
   padding: 10px 10px;
+  align-items: center;
 }
 nav {
   display: flex;
@@ -22,17 +35,13 @@ nav {
   flex-wrap: wrap;
 }
 .logo {
-  width: 150px;
   font-size: 24px;
-  text-transform: uppercase;
 }
 nav ul li {
   display: inline-block;
   list-style-type: none;
   margin: 10px 20px;
   padding-right: 10px;
-}
-@media (max-width: 768px) {
 }
 
 nav ul li a {
@@ -63,7 +72,11 @@ nav ul li a:hover::after {
 #hearder-text {
   margin-top: 5%;
   padding-left: 3%;
-  flex-basis: 35%;
+  flex-basis: 45%;
+}
+#hearder-text span {
+  font-size: 30px;
+  color: #ff004f;
 }
 #hearder-text p {
   font-size: 20px;
@@ -74,7 +87,7 @@ nav ul li a:hover::after {
 #header-pic {
   padding-top: 1%;
   padding-left: 15%;
-  flex-basis: 60%;
+  flex-basis: 45%;
 }
 #header-pic img {
   max-width: 300px;
@@ -105,6 +118,10 @@ nav ul li a:hover::after {
 .tab-titles {
   display: flex;
   margin: 20px 0 40px;
+  align-items: center;
+}
+.tab-titles p a {
+  margin-bottom: 20px;
 }
 .tab-links {
   margin-right: 50px;
@@ -275,7 +292,7 @@ nav ul li a:hover::after {
   transition: all 0.3s;
   background-color: #ff004f;
   text-decoration: none;
-  margin-top: 60px;
+  margin-top: 6px;
 }
 .contact-right form {
   width: 100%;
@@ -325,11 +342,15 @@ nav .fa-solid {
 /* Responsive screens */
 
 @media screen and (max-width: 780px) {
-  #hearder-text p {
+  .hearder-text p {
     font-size: 10px;
   }
-  #hearder-text h1 {
+  .hearder-text h1 {
     font-size: 20px;
+    width: 100%;
+  }
+  header-pic {
+    display: none;
   }
   nav .fa-solid {
     display: block;
@@ -365,4 +386,18 @@ nav .fa-solid {
   .about-col-1 {
     margin-bottom: 30px;
   }
+  #header-pic {
+    display: none;
+  }
+  #hearder-text {
+    flex-basis: 100%;
+    padding-bottom: -100px;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  /* #header {
+    width: 100%;
+    height: 30vh;
+  } */
 }
