@@ -352,6 +352,21 @@ nav .fa-solid {
   header-pic {
     display: none;
   }
+  #header {
+    height: 20vh;
+  }
+  #about{
+    margin-left: 48px;
+  }
+  #services{
+    margin-left: 48px;
+  }
+  #portfolio{
+    margin-left: 48px;
+  }
+  #contact{
+    margin-left: 45px;
+  }
   nav .fa-solid {
     display: block;
     font-size: 30px;
